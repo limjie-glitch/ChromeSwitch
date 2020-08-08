@@ -1,0 +1,35 @@
+{
+	"name": "ChromeSwitch",
+	"version": "1.0",
+	"description": "Dynamic Qrcode Generator that allows webpages on PC to be brought to your phone.",
+	"permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+	"content_security_policy": "[default-src 'self'; script-src 'self' 'sha256-KCAMVhZwcL2HPxiMQXepREZ+bv2b2B32Vkl6rGnAHRw=' 'sha256-AV7kaC1grVsECP14k2mZKErkh6vq39k+h3Y47ZVtm2c=' 'sha256-IDOX4Nqw2xgcyKLTEEBY0EeEv3YUyCgisBwSQwC+//w=' 'sha256-fEbV8AbaFdTGoEpXNqE3IL0zmv0p8TzKSuxTjB2X5s8=' 'sha256-W38A27YNqtesDOhYaSou9viZCKM5hv0pL86L+N/IlzA=' 'sha256-tQIpHYylF0LTbp4JIj0reOVd9GXHYCDl6icq/8/niWw=' 'sha256-68rakXmh4G3GTQ8VFVcpke3WFCxlfiztuUaczYABQS8=' 'sha256-V0lZkVCzLFMuq0oxk/uedxRn3E6RHKqpaEFOOY7HNmI=' 'sha256-yUgHyETjKfgUwvsndj2D8ZrzM1q5axCzec1g7dX3AkU=' 'sha256-aqH7etEIwE/9VzD5GMb/bvkxg4pU9GPh5vmtPdQdBMk='; object-src 'self']",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/get_started16.png",
+			"32": "images/get_started32.png",
+			"48": "images/get_started48.png",
+			"128": "images/get_started128.png"
+		}
+	},
+
+	"content_scripts": [{
+		"js": ["content.js"],
+		"matches": ["http://*/*"]
+	}],
+
+	"icons": {
+		"16": "images/get_started16.png",
+		"32": "images/get_started32.png",
+		"48": "images/get_started48.png",
+		"128": "images/get_started128.png"
+	},
+
+	"manifest_version": 2
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div style = " background-image:url('images/ChromeSwitch Header.jpg'); background-repeat: no-repeat; background-size: auto ;margin:-8px -8px 0px -8px; padding-left: 8px; padding-right: 8px; padding-top: 4px;padding-bottom: 4px; color:white; font-family:Helvetica;font-size:20px;font-weight:900;font-stretch:condensed; font-size: 15px;"> ChromeSwitch&trade; </div>
+    <div style = "display:inline-block; display:table; margin: auto;">
+      <div id="qrcodehere" style = "padding-top: 10px;"> no link loaded</div>
+      <canvas id="canvas" style = "display:table-row; margin:auto;"></canvas>
+    </div>
+      <script src="/node_modules/qrcode/build/qrcode.min.js"></script>
+      <script>
+        let myScript = document.createElement("script");
+        myScript.setAttribute("src", "popup.js");
+        document.body.appendChild(myScript);   
+      </script>
+  </body>
+</html>
